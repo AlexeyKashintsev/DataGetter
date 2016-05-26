@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="q_SELECT1" Title="" entityHeight="200" entityIconified="false" entityId="146429359881856" entityLocationX="0" entityLocationY="0" entityWidth="150" queryId="q_SELECT1" tableName="" tableSchemaName=""/>
+  <entity Name="q_SELECT" Title="" entityHeight="200" entityIconified="false" entityId="146429391768720" entityLocationX="6" entityLocationY="18" entityWidth="150" queryId="q_SELECT" tableName="" tableSchemaName=""/>
+</datamodel>

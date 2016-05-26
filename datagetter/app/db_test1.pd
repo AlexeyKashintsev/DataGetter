@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel datasource="jdbc:postgresql://party-ples.ru:5432/spt_student [student на public]">
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="146429089949734" entityLocationX="315" entityLocationY="56" entityWidth="150" tableName="Main"/>
+</datamodel>

@@ -1,30 +1,23 @@
 /**
  * @public
- * @author Виталий
  */
-define('SERVER', ['orm'], function (Orm, ModuleName) {
-    function module_constructor() {
-        var self = this, model = Orm.loadModel(ModuleName);
+define('SERVER', 'orm', function (Orm, ModuleName) {
+
+    return function () {
+        var dataAccelerationTable = [
+        {name: 'Time'},
+        {name: 'X'},
+        {name: 'Y'},
+        {name: 'Z'}
+    ];
+        var self = this;
         
         // TODO : place constructor code here
         /**
          * @get /get_data
-         * @param {int} x1
-         * @param {int} y1
-         * @param {int} z1
-         * @returns {undefined}
          */
-        self.get_data = function(x1, y1, z1) {
-            model.q_SELECT.push({
-                x: x1,
-                y: y1,
-                z: z1
-            });
-            model.save();
+        this.get_data = function() {
+            return dataAccelerationTable;
         };
-        self.execute = function () {
-            // TODO : place application code here
-        };
-    }
-    return module_constructor;
+    };
 });

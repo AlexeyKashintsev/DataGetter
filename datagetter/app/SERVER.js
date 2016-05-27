@@ -3,12 +3,14 @@
  */
 define('SERVER', 'orm', function (Orm, ModuleName) {
 
+    var model = Orm.loadModel(ModuleName);
+    
     return function () {
         var dataAccelerationTable = [
-        {name: 'Time'},
-        {name: 'X'},
-        {name: 'Y'},
-        {name: 'Z'}
+        {Time: model.q_SELECT_data_time_period},
+        {X: 'X'},
+        {Y: 'Y'},
+        {Z: 'Z'}
     ];
         var self = this;
         

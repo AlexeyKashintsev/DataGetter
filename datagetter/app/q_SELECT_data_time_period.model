@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel datasource="jdbc:postgresql://party-ples.ru:5432/spt_student [student на public]">
+  <parametersEntity entityHeight="200" entityIconified="false" entityLocationX="380" entityLocationY="29" entityWidth="150"/>
+  <entity Title="" entityHeight="200" entityIconified="false" entityId="464342941975675" entityLocationX="175" entityLocationY="31" entityWidth="150" tableAlias="t" tableName="main" tableSchemaName=""/>
+</datamodel>

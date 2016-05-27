@@ -22,16 +22,14 @@ define('FORM', ['orm', 'forms', 'ui', 'rpc'], function (Orm, Forms, Ui, rpc, Mod
         
         // TODO : place your code here
         form.button1.onActionPerformed = function() {
-            var reciveData = module.get_data();
-            console.log(module.get_data());
-            //form.modelGrid.data = reciveData[0].Time;
+            module.get_data(dataRecieved);
+            
+                        
+        };       
+        function dataRecieved (recievedData) {
+          //  console.log(module.get_data());
+            form.modelGrid.data = recievedData;
             //model.q_SELECT.push({colX:reciveData[0].Time});
-            form.textField.text = reciveData[0].Time;
-            form.textField1.text = reciveData[1].X;
-            form.textField2.text = reciveData[2].Y;
-            form.textField3.text = reciveData[3].Z;
-
-               
         };
         
     }

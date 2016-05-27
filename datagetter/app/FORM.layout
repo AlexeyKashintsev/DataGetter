@@ -25,13 +25,13 @@
   <TextField cursor="0" name="textField" parent="view" prefHeight="20px" prefWidth="130px" text="textField">
     <AnchorsPaneConstraints bottom="74px" height="20px" left="10px" width="130px"/>
   </TextField>
-  <TextField name="textField1" parent="view" prefHeight="20px" prefWidth="54px" text="textField1">
+  <TextField cursor="0" name="textField1" parent="view" prefHeight="20px" prefWidth="54px" text="textField1">
     <AnchorsPaneConstraints bottom="74px" height="20px" left="150px" width="54px"/>
   </TextField>
-  <TextField name="textField2" parent="view" prefHeight="20px" prefWidth="54px" text="textField2">
+  <TextField cursor="0" name="textField2" parent="view" prefHeight="20px" prefWidth="54px" text="textField2">
     <AnchorsPaneConstraints bottom="74px" height="20px" left="210px" width="54px"/>
   </TextField>
-  <TextField name="textField3" parent="view" prefHeight="20px" prefWidth="54px" text="textField3">
+  <TextField cursor="0" name="textField3" parent="view" prefHeight="20px" prefWidth="54px" text="textField3">
     <AnchorsPaneConstraints bottom="74px" height="20px" left="270px" width="54px"/>
   </TextField>
   <Button cursor="0" name="button1" parent="view" prefHeight="30px" prefWidth="100px" text="получить">

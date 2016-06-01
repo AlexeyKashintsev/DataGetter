@@ -263,7 +263,7 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
         /**
          * The value of this component.
          */
-        this.value = new Object();
+        this.value = '';
         Object.defineProperty(this, "value", {
             get: function() {
                 var value = delegate.value;
@@ -303,17 +303,6 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
         });
 
         /**
-         * Native API. Returns low level html element. Applicable only in HTML5 client.
-         */
-        this.element = new Object();
-        Object.defineProperty(this, "element", {
-            get: function() {
-                var value = delegate.element;
-                return B.boxAsJs(value);
-            }
-        });
-
-        /**
          * Component shown event handler function.
          */
         this.onComponentShown = new Object();
@@ -324,6 +313,17 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
             },
             set: function(aValue) {
                 delegate.onComponentShown = aValue;
+            }
+        });
+
+        /**
+         * Native API. Returns low level html element. Applicable only in HTML5 client.
+         */
+        this.element = new Object();
+        Object.defineProperty(this, "element", {
+            get: function() {
+                var value = delegate.element;
+                return B.boxAsJs(value);
             }
         });
 

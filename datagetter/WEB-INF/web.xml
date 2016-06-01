@@ -2,7 +2,7 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
   <context-param>
     <param-name>default-datasource</param-name>
-    <param-value>jdbc:postgresql://party-ples.ru:5432/spt_student [student на STUDENT]</param-value>
+    <param-value>jdbc:postgresql://party-ples.ru:5432/spt_student [student на public]</param-value>
   </context-param>
   <context-param>
     <param-name>appelement</param-name>
@@ -20,7 +20,7 @@
     <servlet-class>com.eas.server.httpservlet.PlatypusHttpServlet</servlet-class>
     <async-supported>true</async-supported>
     <multipart-config>
-      <location>D:/git/DataGetter/datagetter/pub</location>
+      <location>D:/project/datagetter/pub</location>
       <max-file-size>2097152</max-file-size>
       <max-request-size>2165824</max-request-size>
       <file-size-threshold>1048576</file-size-threshold>
@@ -31,20 +31,20 @@
     <url-pattern>/application/*</url-pattern>
   </servlet-mapping>
   <resource-ref>
+    <description>jdbc:h2:tcp://localhost/D://github/server/server [ на Схема по умолчанию]</description>
+    <res-ref-name>jdbc:h2:tcp://localhost/D://github/server/server [ на Схема по умолчанию]</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <resource-ref>
     <description>jdbc:h2:tcp://localhost/~/test_db [sa на PUBLIC]</description>
     <res-ref-name>test_db</res-ref-name>
     <res-type>javax.sql.DataSource</res-type>
     <res-auth>Container</res-auth>
   </resource-ref>
   <resource-ref>
-    <description>jdbc:jtds:sqlserver://localhost:57573/Taxi [sa на SA]</description>
-    <res-ref-name>jdbc:jtds:sqlserver://localhost:57573/Taxi [sa на SA]</res-ref-name>
-    <res-type>javax.sql.DataSource</res-type>
-    <res-auth>Container</res-auth>
-  </resource-ref>
-  <resource-ref>
-    <description>jdbc:postgresql://party-ples.ru:5432/spt_student [student на STUDENT]</description>
-    <res-ref-name>jdbc:postgresql://party-ples.ru:5432/spt_student [student на STUDENT]</res-ref-name>
+    <description>jdbc:jtds:sqlserver://localhost:1433/Apteka [sa на SA]</description>
+    <res-ref-name>jdbc:jtds:sqlserver://localhost:1433/Apteka [sa на SA]</res-ref-name>
     <res-type>javax.sql.DataSource</res-type>
     <res-auth>Container</res-auth>
   </resource-ref>

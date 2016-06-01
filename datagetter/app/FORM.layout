@@ -1,24 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="344px" prefWidth="463px"/>
-  <ModelGrid cursor="0" data="q_SELECT" name="modelGrid" parent="view" prefHeight="200px" prefWidth="440px">
-    <AnchorsPaneConstraints height="200px" left="10px" top="30px" width="440px"/>
-    <ServiceGridColumn name="colService" resizable="true"/>
-    <ModelGridColumn field="main_id" name="colMain_id" title="colMain_id" width="80px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="time" name="colTime" title="colTime" width="80px">
-      <ModelDate format="dd.MM.yyyy HH:mm:ss.SSS"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="x" name="colX" title="colX" width="80px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="y" name="colY" title="colY" width="80px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-    <ModelGridColumn field="z" name="colZ" title="colZ" width="79px">
-      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
-    </ModelGridColumn>
-  </ModelGrid>
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="344px" prefWidth="729px"/>
   <Button cursor="0" name="button" parent="view" prefHeight="30px" prefWidth="100px" text="Отправить">
     <AnchorsPaneConstraints bottom="4px" height="30px" left="10px" width="100px"/>
   </Button>
@@ -37,4 +18,23 @@
   <Button cursor="0" name="button1" parent="view" prefHeight="30px" prefWidth="100px" text="получить">
     <AnchorsPaneConstraints bottom="4px" height="30px" left="130px" width="100px"/>
   </Button>
+  <ModelGrid cursor="0" data="q_SELECT" name="modelGrid" parent="view" prefHeight="230px" prefWidth="710px">
+    <AnchorsPaneConstraints height="230px" left="10px" top="10px" width="710px"/>
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="main_id" name="colMain_id" title="colMain_id" width="134px">
+      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="x" name="colX" title="colX" width="134px">
+      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="y" name="colY" title="colY" width="134px">
+      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="z" name="colZ" title="colZ" width="134px">
+      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="time" name="colTime" title="colTime" width="133px">
+      <ModelDate format="dd.MM.yyyy HH:mm:ss.SSS"/>
+    </ModelGridColumn>
+  </ModelGrid>
 </layout>

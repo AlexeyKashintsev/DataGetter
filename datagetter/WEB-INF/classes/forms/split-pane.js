@@ -152,20 +152,6 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
         });
 
         /**
-         * The split pane divider's location in pixels.
-         */
-        this.dividerLocation = 0;
-        Object.defineProperty(this, "dividerLocation", {
-            get: function() {
-                var value = delegate.dividerLocation;
-                return B.boxAsJs(value);
-            },
-            set: function(aValue) {
-                delegate.dividerLocation = B.boxAsJava(aValue);
-            }
-        });
-
-        /**
          * Component added event hanler function.
          */
         this.onComponentAdded = new Object();
@@ -176,6 +162,20 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
             },
             set: function(aValue) {
                 delegate.onComponentAdded = aValue;
+            }
+        });
+
+        /**
+         * The split pane divider's location in pixels.
+         */
+        this.dividerLocation = 0;
+        Object.defineProperty(this, "dividerLocation", {
+            get: function() {
+                var value = delegate.dividerLocation;
+                return B.boxAsJs(value);
+            },
+            set: function(aValue) {
+                delegate.dividerLocation = B.boxAsJava(aValue);
             }
         });
 
@@ -303,17 +303,6 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
         });
 
         /**
-         * Native API. Returns low level html element. Applicable only in HTML5 client.
-         */
-        this.element = new Object();
-        Object.defineProperty(this, "element", {
-            get: function() {
-                var value = delegate.element;
-                return B.boxAsJs(value);
-            }
-        });
-
-        /**
          * Component shown event handler function.
          */
         this.onComponentShown = new Object();
@@ -324,6 +313,17 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
             },
             set: function(aValue) {
                 delegate.onComponentShown = aValue;
+            }
+        });
+
+        /**
+         * Native API. Returns low level html element. Applicable only in HTML5 client.
+         */
+        this.element = new Object();
+        Object.defineProperty(this, "element", {
+            get: function() {
+                var value = delegate.element;
+                return B.boxAsJs(value);
             }
         });
 
@@ -412,17 +412,6 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
         });
 
         /**
-         * Gets the number of components in this panel.
-         */
-        this.count = 0;
-        Object.defineProperty(this, "count", {
-            get: function() {
-                var value = delegate.count;
-                return B.boxAsJs(value);
-            }
-        });
-
-        /**
          * Main action performed event handler function.
          */
         this.onActionPerformed = new Object();
@@ -447,6 +436,17 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
             },
             set: function(aValue) {
                 delegate.onKeyReleased = aValue;
+            }
+        });
+
+        /**
+         * Gets the number of components in this panel.
+         */
+        this.count = 0;
+        Object.defineProperty(this, "count", {
+            get: function() {
+                var value = delegate.count;
+                return B.boxAsJs(value);
             }
         });
 
@@ -659,17 +659,6 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
 
     }
     /**
-     * Tries to acquire focus for this component.
-     * @method focus
-     * @memberOf SplitPane
-     */
-    SplitPane.prototype.focus = function() {
-        var delegate = this.unwrap();
-        var value = delegate.focus();
-        return B.boxAsJs(value);
-    };
-
-    /**
      * Gets the container's children components.
      * @method children
      * @memberOf SplitPane
@@ -677,6 +666,17 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
     SplitPane.prototype.children = function() {
         var delegate = this.unwrap();
         var value = delegate.children();
+        return B.boxAsJs(value);
+    };
+
+    /**
+     * Tries to acquire focus for this component.
+     * @method focus
+     * @memberOf SplitPane
+     */
+    SplitPane.prototype.focus = function() {
+        var delegate = this.unwrap();
+        var value = delegate.focus();
         return B.boxAsJs(value);
     };
 

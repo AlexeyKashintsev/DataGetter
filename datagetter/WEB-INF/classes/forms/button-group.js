@@ -260,17 +260,6 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
         });
 
         /**
-         * Native API. Returns low level html element. Applicable only in HTML5 client.
-         */
-        this.element = new Object();
-        Object.defineProperty(this, "element", {
-            get: function() {
-                var value = delegate.element;
-                return B.boxAsJs(value);
-            }
-        });
-
-        /**
          * Component shown event handler function.
          */
         this.onComponentShown = new Object();
@@ -281,6 +270,17 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
             },
             set: function(aValue) {
                 delegate.onComponentShown = aValue;
+            }
+        });
+
+        /**
+         * Native API. Returns low level html element. Applicable only in HTML5 client.
+         */
+        this.element = new Object();
+        Object.defineProperty(this, "element", {
+            get: function() {
+                var value = delegate.element;
+                return B.boxAsJs(value);
             }
         });
 
@@ -355,17 +355,6 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
         });
 
         /**
-         * Gets the number of components in this panel.
-         */
-        this.count = 0;
-        Object.defineProperty(this, "count", {
-            get: function() {
-                var value = delegate.count;
-                return B.boxAsJs(value);
-            }
-        });
-
-        /**
          * Main action performed event handler function.
          */
         this.onActionPerformed = new Object();
@@ -390,6 +379,17 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
             },
             set: function(aValue) {
                 delegate.onKeyReleased = aValue;
+            }
+        });
+
+        /**
+         * Gets the number of components in this panel.
+         */
+        this.count = 0;
+        Object.defineProperty(this, "count", {
+            get: function() {
+                var value = delegate.count;
+                return B.boxAsJs(value);
             }
         });
 
@@ -625,17 +625,6 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
     };
 
     /**
-     * Tries to acquire focus for this component.
-     * @method focus
-     * @memberOf ButtonGroup
-     */
-    ButtonGroup.prototype.focus = function() {
-        var delegate = this.unwrap();
-        var value = delegate.focus();
-        return B.boxAsJs(value);
-    };
-
-    /**
      * Gets the container's children components.
      * @method children
      * @memberOf ButtonGroup
@@ -643,6 +632,17 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
     ButtonGroup.prototype.children = function() {
         var delegate = this.unwrap();
         var value = delegate.children();
+        return B.boxAsJs(value);
+    };
+
+    /**
+     * Tries to acquire focus for this component.
+     * @method focus
+     * @memberOf ButtonGroup
+     */
+    ButtonGroup.prototype.focus = function() {
+        var delegate = this.unwrap();
+        var value = delegate.focus();
         return B.boxAsJs(value);
     };
 

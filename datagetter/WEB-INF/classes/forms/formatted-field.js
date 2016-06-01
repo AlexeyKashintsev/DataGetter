@@ -328,17 +328,6 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
         });
 
         /**
-         * Native API. Returns low level html element. Applicable only in HTML5 client.
-         */
-        this.element = new Object();
-        Object.defineProperty(this, "element", {
-            get: function() {
-                var value = delegate.element;
-                return B.boxAsJs(value);
-            }
-        });
-
-        /**
          * Component shown event handler function.
          */
         this.onComponentShown = new Object();
@@ -349,6 +338,17 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
             },
             set: function(aValue) {
                 delegate.onComponentShown = aValue;
+            }
+        });
+
+        /**
+         * Native API. Returns low level html element. Applicable only in HTML5 client.
+         */
+        this.element = new Object();
+        Object.defineProperty(this, "element", {
+            get: function() {
+                var value = delegate.element;
+                return B.boxAsJs(value);
             }
         });
 
@@ -434,8 +434,8 @@ define(['boxing', 'common-utils/color', 'common-utils/cursor', 'common-utils/fon
         });
 
         /**
-         * Field text format.
-         */
+        * Field text format.
+        */
         this.format = '';
         Object.defineProperty(this, "format", {
             get: function() {

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><Context path="">
-  <Realm className="org.apache.catalina.realm.DataSourceRealm" dataSourceName="jdbc:postgresql://party-ples.ru:5432/spt_student [student на STUDENT]" digest="MD5" localDataSource="true" roleNameCol="GROUP_NAME" userCredCol="USR_PASSWD" userNameCol="USR_NAME" userRoleTable="MTD_GROUPS" userTable="MTD_USERS"/>
+  <Realm className="org.apache.catalina.realm.DataSourceRealm" dataSourceName="jdbc:postgresql://party-ples.ru:5432/spt_student [student на public]" digest="MD5" localDataSource="true" roleNameCol="GROUP_NAME" userCredCol="USR_PASSWD" userNameCol="USR_NAME" userRoleTable="MTD_GROUPS" userTable="MTD_USERS"/>
+  <Resource driverClassName="org.h2.Driver" name="jdbc:h2:tcp://localhost/D://github/server/server [ на Схема по умолчанию]" password="" type="javax.sql.DataSource" url="jdbc:h2:tcp://localhost/D://github/server/server" username=""/>
   <Resource driverClassName="org.h2.Driver" name="test_db" password="" schema="PUBLIC" type="javax.sql.DataSource" url="jdbc:h2:tcp://localhost/~/test_db" username="sa"/>
-  <Resource driverClassName="net.sourceforge.jtds.jdbc.Driver" name="jdbc:jtds:sqlserver://localhost:57573/Taxi [sa на SA]" password="123" schema="SA" type="javax.sql.DataSource" url="jdbc:jtds:sqlserver://localhost:57573/Taxi" username="sa" validationQuery="select 1"/>
-  <Resource driverClassName="org.postgresql.Driver" name="jdbc:postgresql://party-ples.ru:5432/spt_student [student на STUDENT]" password="student" schema="STUDENT" type="javax.sql.DataSource" url="jdbc:postgresql://party-ples.ru:5432/spt_student" username="student"/>
+  <Resource driverClassName="net.sourceforge.jtds.jdbc.Driver" name="jdbc:jtds:sqlserver://localhost:1433/Apteka [sa на SA]" password="123" schema="SA" type="javax.sql.DataSource" url="jdbc:jtds:sqlserver://localhost:1433/Apteka" username="sa"/>
   <Resource driverClassName="org.postgresql.Driver" name="jdbc:postgresql://party-ples.ru:5432/spt_student [student на public]" password="student" schema="public" type="javax.sql.DataSource" url="jdbc:postgresql://party-ples.ru:5432/spt_student" username="student"/>
 </Context>

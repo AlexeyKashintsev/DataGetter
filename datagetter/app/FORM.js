@@ -21,6 +21,17 @@ define('FORM', ['orm', 'forms', 'ui', 'rpc'], function (Orm, Forms, Ui, rpc, Mod
         };
         
         // TODO : place your code here
+        form.button.onActionPerformed = function() {
+            var db = {
+                time: form.textField.text,
+                x: form.textField1.text,
+                y: form.textField2.text,
+                z: form.textField3.text
+            };
+            module.push_data(db, function(result){
+                console.log(result);
+            });
+        };
         form.button1.onActionPerformed = function() {
             module.get_data(dataRecieved);
             

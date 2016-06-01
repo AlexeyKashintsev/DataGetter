@@ -55,7 +55,7 @@ define(function () {
             if (aValue.getPublished) {
                 aValue = aValue.getPublished();
             } else if (aValue instanceof JavaDateClass) {
-                aValue = new Date(+aValue.getTime());
+                aValue = new Date(aValue.time);
             } else if (aValue instanceof JavaStringClass) {
                 aValue += '';
             } else if (aValue instanceof JavaArrayClass) {
@@ -67,7 +67,7 @@ define(function () {
             } else if (aValue instanceof JavaCollectionClass) {
                 var converted = [];
                 for each (var v in aValue) {
-                    converted.push(boxAsJs(v));
+                    converted[converted.length] = boxAsJs(v);
                 }
                 return converted;
             }
